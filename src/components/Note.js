@@ -1,13 +1,15 @@
 import React from 'react';
 
-class Note extends React.Component {
+class NoteCard extends React.Component {
+
+// class Note extends React.Component {
   render() {
-    return (
-      <div className="note-container">
+   return (
+     <div className="note-container">
         Note Component
-      </div>
-    );
-  }
+     </div>
+     );
+   }
 }
 
-export default Note;
+export default NoteCard;
