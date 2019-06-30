@@ -8,7 +8,7 @@ class List extends Component {
   }
   
   render() {
-    const [ notes } = this.props;
+     const [ notes } = this.props;
 
     const cards = notes.map((note, index) => {
       return (
