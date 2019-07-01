@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Nav from './components/Nav';
+// import Nav from './components/Nav';
 import List from './components/List';
 import NoteCard from './components/NoteCard';
 import axios from 'axios';
@@ -37,7 +37,7 @@ getNotes = () => {
 
     return (
     <div className="App">
-      <Nav toggleNote={this.toggleNote} showNote={showNote} />
+      // <Nav toggleNote={this.toggleNote} showNote={showNote} />
       { showNote ? <NoteCard /> : <List getNotes={this.getNotes}/> }
           // notes={notes}
     </div>
