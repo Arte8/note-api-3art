@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NoteCard from './NoteCard';
+// import NoteCard from './NoteCard';
 
 class List extends Component {
 
@@ -8,24 +8,16 @@ class List extends Component {
   }
   
   render() {
-    const { notes } = this.props;
+    // const { notes } = this.props;
+    // const notes = [];
 
-    const cards = notes.map((note, index) => {
+    // const cards = notes.map((note, index) => {
       return (
-        <NoteCard
-          key={index}
-          index={index}
-          note={note}
-        />
+        <div className="list-container">
+        List Component
+      </div>       
       );
-    });
-
-    return (
-      <div className="list-container">
-        {cards}
-      </div>
-    );
+    }
   }
-}
 
 export default List;
