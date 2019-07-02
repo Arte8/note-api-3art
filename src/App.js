@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import List from './components/List';
-import NoteCard from './components/NoteCard';
+import Note from './components/NoteCard';
 import axios from 'axios';
 import urlFor from './helpers/urlFor';
 
@@ -25,10 +25,8 @@ toggleNote = () => {
 getNotes = () => {
   // this.setState = {notes: []};
   axios.get(urlFor('notes'))
-  // .then((res) => this.setState({ notes: res.data }) )
-  // .catch((err) => console.log(err.response.data) );
-  // axios.get('https://note-app-3art.herokuapp.com/notes')
-  .then((res) => console.log(res.data) )
+  
+  .then((res) => this.setState({ notes: res.data }) )
   .catch((err) => console.log(err.response.data) );
   }
 
@@ -38,7 +36,7 @@ getNotes = () => {
     return (
     <div className="App">
     <Nav toggleNote={this.toggleNote} showNote={showNote} />
-      { showNote ? <NoteCard /> : <List getNotes={this.getNotes}/> }
+      { showNote ? <Note /> : <List getNotes={this.getNotes}/> }
           // notes={notes}
     </div>
   );

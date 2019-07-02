@@ -8,10 +8,7 @@ class List extends Component {
   }
   
   render() {
-    // const { notes } = this.props;
-    // const notes = [];
-
-    // const cards = notes.map((note, index) => {
+    
       return (
         <div className="list-container">
         List Component
