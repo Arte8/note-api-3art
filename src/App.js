@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Nav';
 import List from './components/List';
@@ -12,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       showNote: false,
-      // notes: []
+      notes: []
     };
   }
 
