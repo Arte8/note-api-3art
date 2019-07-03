@@ -22,7 +22,7 @@ class List extends Component {
     
     return (
         <div className="list-container">
-        List Component
+        {cards}
       </div>       
       );
     }
