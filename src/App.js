@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      showNote: false
+      showNote: false,
       notes: []
     };
   }
