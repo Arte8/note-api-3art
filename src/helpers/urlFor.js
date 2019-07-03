@@ -1,6 +1,5 @@
 const urlFor = (endpoint) => {
-  // return 'https://note-app-3art.herokuapp.com/' + endpoint;
-  return 'httpS://localhost:3000/' + endpoint;
+  return 'https://note-api-3art.herokuapp.com/' + endpoint;
 };
 
 export default urlFor;
