@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
@@ -23,14 +24,14 @@ class App extends Component {
   };
 
   getNotes = () => {
-    axios.get(urlFor('notes'))
-      .then(res => this.setState({ notes: res.data }))
-      .catch(err => console.log(err.response.data));
+    axios
+      .get(urlFor('notes'))
+      .then((res) => this.setState({ notes: res.data }) )
+      .catch((err) => console.log(err.response.data) );
   };
 
   getNote = (id) => {
-    axios
-    .get(urlFor(`notes/${id}`))
+    axios.get(urlFor(`notes/${id}`))
     .then((res) => this.setState({ note: res.data, showNote: true }) )
     .catch((err) => console.log(err.response.data) );
   }
@@ -42,8 +43,8 @@ class App extends Component {
       <div className="App">
         <Nav toggleNote={this.toggleNote} showNote={showNote} />
         {showNote ? 
-          <Note 
-            note={note}
+          <Note
+          note={note} 
           /> 
           : 
           <List 
