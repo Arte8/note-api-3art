@@ -20,7 +20,7 @@ class List extends Component {
           deleteNote={deleteNote}
         />
       );
-    });
+    }); 
     
     return (
         <div className="list-container">
