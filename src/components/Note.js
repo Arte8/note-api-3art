@@ -13,10 +13,14 @@ class Note extends React.Component {
 
 onTagSubmit(e) {
   e.preventDefault();
-  console.log(this.name.value);
+  const formData = {
+      name: this.name.value
+    };
+  this.props.submitTag(formData, this.props.note.id)
   this.props.closeTagForm();
 }
-  renderTagForm() {
+  renderTagForm(note) {
+    if (note.id !== undefined) {
     if (!this.props.newTag) {
       return (
         <span>
@@ -44,7 +48,7 @@ onTagSubmit(e) {
   }
 }
 
-  render() {
+  render() ;
     const { note } = this.props;
 
     return (
@@ -67,12 +71,13 @@ onTagSubmit(e) {
         </form>
         <div className="tag-container">
           <div className="tag-button-container">
-        {this.renderTagForm()}
+            {this.renderTagForm(note )}
           </div>
         </div>
       </div>
     );
   }
+}
 }
 
 export default Note;
