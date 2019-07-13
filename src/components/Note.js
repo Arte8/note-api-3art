@@ -47,8 +47,8 @@ onTagSubmit(e) {
 
   }
 }
-
-  render() ;
+}
+  render() {
     const { note } = this.props;
 
     return (
@@ -77,7 +77,6 @@ onTagSubmit(e) {
       </div>
     );
   }
-}
 }
 
 export default Note;
