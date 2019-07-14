@@ -73,6 +73,12 @@ showTagForm = () => {
     .catch((err) => console.log(err.response.data) );
   }
 
+  deleteTag  = (noteId, id) => {
+    axios.delete(urlFor(`/tags/${id}`))
+    .then((res) => this.getNote(noteId) )
+    .catch((err) => console.log(err.response.data) );
+}
+
   render() {
     const { showNote, notes, note, newTag } = this.state;
 
@@ -87,6 +93,7 @@ showTagForm = () => {
           newTag={newTag}
           closeTagForm={this.closeTagForm}
           submitTag={this.submitTag}
+          deleteTag={this.deleteTag}
           /> 
           : 
           <List 
